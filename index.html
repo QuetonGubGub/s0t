@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>S0</title>
+</head>
+<body>
+    <header>
+        <p id="intro">Welcome to :</p>
+        <h1>SECTOR ZERO</h1>
+        <ul class="spList">
+            <li>[</li>
+            <li><a href="about/index.html">About</a></li>
+            <li>|</li>
+            <li><a href="blog/index.html">Blog</a></li>
+            <li>|</li>
+            <li><a href="gallery/index.html">Gallery</a></li>
+            <li>|</li>
+            <li><a href="links/index.html">Links</a></li>
+            <li>]</li>
+        </ul>
+        <br>
+        <marquee>
+            <img src="img/blink/construction.gif">
+            <img src="img/blink/flower.gif">
+            <img src="img/blink/clover.gif">
+            <img src="img/blink/dreamPix.gif">
+            <img src="img/blink/glitter.gif">
+            <img src="img/blink/night.gif">
+            <img src="img/blink/belive.gif">
+            <img src="img/blink/cherries.gif">
+            <img src="img/blink/purple.gif">
+            <img src="img/blink/rainbow.gif">
+        </marquee>
+    </header>
+    <hr>
+    <main>
+        Video games : <a href="https://rainbowshards.itch.io">Rainbow Shards</a> (<a href="https://www.youtube.com/@RainbowShardsGames">YT channel</a>)<br>
+        Scratch experiments : <a href="https://scratch.mit.edu/users/BlockBreakR/">BlockBreakR</a><br>
+        <br>
+        Web pages i made :
+        <ul>
+            <li><a href="toys/mosaique/index.html">mosaique</a></li>
+            <li><a href="toys/mosaIIque/index.html">mosaIIque</a></li>
+            <li><a href="toys/rest/index.html">resting place</a></li>
+            <li><a href="toys/postIt/Index.html">post-it page</a></li>
+        </ul>
+    </main>
+    <hr>
+        <div id="buttonWall">
+            <img class="button" src="img/inside/bestvieweddesktop.gif" alt="This website is best viewed on desktop.">
+            <img class="button" src="img/inside/css.gif" alt="This website is made with css, too bad you can't see how pretty it is. Don't worry, i tried to make it accessible for you !">
+            <img class="button" src="img/inside/mac.gif" alt="This website was made on a Mac.">
+            <img class="button" src="img/inside/madewithlove.png" alt="This website was made with love.">
+            <img class="button" src="img/inside/nocookies.gif" alt="This website has no cookies !">
+            <img class="button" src="img/inside/vsc.gif" alt="This website was made on V-S Code.">
+
+            <img class="button" src="img/inside/puter.jpg" alt="On my 'puter">
+            <img class="button" src="img/inside/ai.gif" alt="NO AI">
+            <img class="button" src="img/inside/null.gif" id="exeption">
+            <img class="button" src="img/inside/pictochat.gif" id="I miss using pictochat">
+            <img class="button" src="img/inside/hasmile.gif" alt="Smile !">
+            <img class="button" src="img/inside/games.gif" alt="No bacon, just games.">
+
+            <img class="button" src="img/inside/xp.gif" alt="I started on xp">
+            <img class="button" src="img/inside/wii.gif" alt="I like the wii">
+            <img class="button" src="img/inside/ds.jpg" alt="I like the ds">
+            <img class="button" src="img/inside/3s.jpg" alt="I like the 3ds">
+        </div>
+    <hr>
+    <footer>
+        <span id="clock">Loading...</span>
+        <br>
+        2026 - Floppy eared shapeshifter
+    </footer>
+    <script>
+        var span = document.getElementById('clock');
+
+        function time() {
+        var d = new Date();
+        var s = d.getSeconds();
+        var m = d.getMinutes();
+        var h = d.getHours();
+        span.textContent = 
+            ("0" + h).substr(-2) + ":" + ("0" + m).substr(-2) + ":" + ("0" + s).substr(-2);
+        }
+
+        setInterval(time, 1000);
+    </script>
+</body>
+</html>

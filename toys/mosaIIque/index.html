@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="question">
+        <input type="number" id="nb1" placeholder="12">
+        <input type="number" id="nb2" placeholder="30">
+        <button onclick="tableau()">OK</button>
+    </div>
+    <div id="tableau"><!-- Résultat --></div>
+</body>
+<script>
+    var input1 = document.getElementById("nb1");
+    var input2 = document.getElementById("nb2");
+
+    function tableau() {
+        //Création des variables
+        var Nx = Number(input1.value); //Nombre de colonnes
+        var Ny = Number(input2.value); //Nombre de lignes
+        console.log("Conversion des imputs réussi");
+
+        //Création de la table
+        var t = document.createElement("table"); // Crée la balise <table>
+        t.style.borderStyle = "solid"; //On ajoute un style (un contour)
+        console.log("Table crée");
+
+        //Création du contenu de la table
+        for (var i = 0; i < Ny; i++) {
+            var ligne = document.createElement("tr")//Crée un autre élément
+            console.log("Élément : ligne crée");
+            
+            //On duplique la case autant de fois que x
+            for (var j = 0; j < Nx; j++) {
+                var elmt = document.createElement("td")//Crée un élément
+                elmt.style.borderStyle = "solid"; //On ajoute un style (un contour)
+                elmt.style.borderWidth = "0.1px"; //On ajoute un style (un contour)
+                elmt.style.width = "10px"; //On ajoute un style (un contour)
+                elmt.style.height = "10px"; //On ajoute un style (un contour)
+                elmt.style.backgroundColor = getRandomColor(); //On ajoute de la couleure
+
+                console.log("Élément : case");
+                elmt.appendChild(document.createTextNode(" ")); //On ajoute du texte à la case
+                /*elmt.appendChild(document.createTextNode(" ")); //On ajoute du texte à la case*/
+                console.log("Élément : texte ajouté à case");
+                ligne.appendChild(elmt); //On ajoute la cases à la ligne
+                console.log("Élément : Ajout d'une case à ligne");
+            }
+            t.appendChild(ligne);
+            console.log(t);
+            console.log("Élément : ligne ajouté à Table");
+        }
+
+        //Compilation finale
+        var table = document.getElementById("tableau"); //La variable "t" prend l'ID de "tableau"
+        console.log("Élément : compilation finale...");
+        table.appendChild(t) //appendChild ajoute <table> au "tableau" qui est la balise <div>
+    }
+
+    function getRandomColor() {
+    var letters = '0123456789ABCDEF';
+    var color = '#';
+    for (var i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+    }
+</script>
+</html>
